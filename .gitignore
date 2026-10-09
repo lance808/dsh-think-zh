@@ -1,3 +1,7 @@
 node_modules/
 *.log
 .DS_Store
+
+# Temporary git credential helpers must never be committed.
+.askpass-*.mjs
+.git-askpass*.mjs
