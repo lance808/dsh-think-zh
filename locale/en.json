@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Think in Chinese",
+    "description": "Adds an instruction to the system prompt so the agent reasons in Chinese (or another configured language) before it answers."
+  }
+}

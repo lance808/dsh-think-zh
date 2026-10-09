@@ -1,0 +1,55 @@
+{
+  "name": "dsh-think-zh",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "DeepSeek Harness plugin: make the agent reason (think) in Chinese by contributing a system-prompt section",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis-plugin",
+    "system-prompt",
+    "reasoning-language",
+    "chinese",
+    "i18n"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lance808/dsh-think-zh.git"
+  },
+  "homepage": "https://github.com/lance808/dsh-think-zh#readme",
+  "bugs": {
+    "url": "https://github.com/lance808/dsh-think-zh/issues"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "README.md",
+    "README.en.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node test.js",
+    "test:runner": "node --test"
+  },
+  "meta": {
+    "title": "Think in Chinese",
+    "description": "Tell the agent to reason in Chinese (or another configured language) before it answers."
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

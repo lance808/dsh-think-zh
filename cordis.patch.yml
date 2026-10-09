@@ -1,0 +1,23 @@
+# This bundle's one patch layer: a single row on the Host plane.
+#
+# The row is global, so the section reaches every Agent in this profile,
+# including subagents, workflow children, and forked children. Turning the row
+# (or this whole bundle) off in the Plugin Manager page removes the section
+# without touching the user's own patch layer.
+#
+# `id: think-in-chinese` is deliberately unchanged by the project rename to
+# dsh-think-zh: it is the identity a running profile resolves. Only the package
+# name below follows the rename.
+#
+# Only fields the shipped release accepts are stated here. `verbatim` and
+# `instruction` are documented in the README and can be added by the user's own
+# patch layer at any time; leaving them out keeps this layer loadable by the
+# release in place, which a replaced local bundle cannot always be (see the
+# "Replacing an installed local bundle" note in the README).
+- insert:
+    - id: think-in-chinese
+      name: 'dsh-think-zh'
+      config:
+        language: 简体中文
+        target: think
+        enabled: true
